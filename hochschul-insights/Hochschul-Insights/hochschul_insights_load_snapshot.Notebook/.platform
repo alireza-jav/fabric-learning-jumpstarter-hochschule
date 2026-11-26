@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "hochschul_insights_load_snapshot",
+    "description": ""
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "98b36010-beb8-bc25-4711-d598282890f7"
+  }
+}

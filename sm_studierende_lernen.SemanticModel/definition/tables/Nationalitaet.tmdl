@@ -1,0 +1,53 @@
+table Nationalitaet
+	lineageTag: 7260037d-c4ba-4d05-b4c1-a826d4956c9d
+	sourceLineageTag: [Genesis].[nationalitaet]
+
+	measure Studierende = SUM(Studierende[Wert])
+		formatString: 0
+		lineageTag: e0e1cd44-4f0c-4e57-b4d7-df2c4b1c4c0b
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	/// share of female students
+	measure 'Anteil weiblich' = DIVIDE(CALCULATE([Studierende], Geschlecht[Geschlecht] = "weiblich"),[Studierende])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c24823a6-cb94-4cb7-8d0d-d547e67e9407
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+		changedProperty = Description
+
+	/// quantity of Hochschule
+	measure 'Anzahl Hochschulen' = DISTINCTCOUNT(Studierende[Hochschule_Code])
+		formatString: 0
+		lineageTag: 0254d913-1b4e-4a4f-8b57-c01748927207
+
+		changedProperty = Name
+
+		changedProperty = Description
+
+	column Nationalitaet
+		dataType: string
+		isHidden
+		lineageTag: d8aa42d1-0009-4b6e-93aa-bbf340bd1641
+		sourceLineageTag: Nationalitaet
+		summarizeBy: none
+		sourceColumn: Nationalitaet
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Nationalitaet = entity
+		mode: directLake
+		source
+			entityName: nationalitaet
+			schemaName: Genesis
+			expressionSource: 'DirectLake - hochschul_insights_lh'
+
+	changedProperty = Name
+

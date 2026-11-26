@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "nb_install Hochschule"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "57db3312-7462-8fb5-4138-f0eeb792aad7"
+  }
+}

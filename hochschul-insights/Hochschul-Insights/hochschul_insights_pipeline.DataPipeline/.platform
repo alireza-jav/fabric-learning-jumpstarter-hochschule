@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "hochschul_insights_pipeline",
+    "description": "Parallel load of 10 GENESIS facts then dim build"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1ff4fb61-7354-8801-4c7a-13416c8c2176"
+  }
+}

@@ -1,0 +1,12 @@
+relationship fac7c755-a836-d6b4-d40d-d8c521cc0a23
+	fromColumn: Studierende.Geschlecht
+	toColumn: Geschlecht.Geschlecht
+
+relationship 10e90dae-6eca-a8b9-280b-3bc7f72832a6
+	fromColumn: Studierende.Nationalitaet
+	toColumn: Nationalitaet.Nationalitaet
+
+relationship 67247007-9816-32e5-d7f6-67f564a3e42c
+	fromColumn: Studierende.Hochschule_Code
+	toColumn: Hochschulen.Hochschule_Code
+

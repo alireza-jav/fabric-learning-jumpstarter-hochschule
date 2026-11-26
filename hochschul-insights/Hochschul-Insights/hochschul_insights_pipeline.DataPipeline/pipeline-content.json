@@ -1,0 +1,304 @@
+{
+  "properties": {
+    "description": "Loads 10 GENESIS fact tables in parallel, then builds Hochschule + attribute dimensions.",
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "604c7278-3aa9-b808-44d7-d5c85df72db2",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "tables_to_load": {
+              "value": "Hochschulfinanzen",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.02:00:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 60,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_Hochschulfinanzen",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "604c7278-3aa9-b808-44d7-d5c85df72db2",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "tables_to_load": {
+              "value": "Ausgaben",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.02:00:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 60,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_Ausgaben",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "604c7278-3aa9-b808-44d7-d5c85df72db2",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "tables_to_load": {
+              "value": "Einnahmen",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.02:00:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 60,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_Einnahmen",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "604c7278-3aa9-b808-44d7-d5c85df72db2",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "tables_to_load": {
+              "value": "Drittmittel",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.02:00:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 60,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_Drittmittel",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "604c7278-3aa9-b808-44d7-d5c85df72db2",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "tables_to_load": {
+              "value": "Hochschulpersonal",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.02:00:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 60,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_Hochschulpersonal",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "604c7278-3aa9-b808-44d7-d5c85df72db2",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "tables_to_load": {
+              "value": "WissPersonalFach",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.02:00:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 60,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_WissPersonalFach",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "604c7278-3aa9-b808-44d7-d5c85df72db2",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "tables_to_load": {
+              "value": "Professoren",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.02:00:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 60,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_Professoren",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "604c7278-3aa9-b808-44d7-d5c85df72db2",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "tables_to_load": {
+              "value": "StudierendeBund",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.02:00:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 60,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_StudierendeBund",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "604c7278-3aa9-b808-44d7-d5c85df72db2",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "tables_to_load": {
+              "value": "Studierende",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.02:00:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 60,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_Studierende",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "604c7278-3aa9-b808-44d7-d5c85df72db2",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "tables_to_load": {
+              "value": "StudienanfaengerHochschule",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.02:00:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 60,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Load_StudienanfaengerHochschule",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "937c1724-f48f-951f-4254-d589c29d01af",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        },
+        "policy": {
+          "timeout": "0.01:00:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 60,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Build_Dimensions",
+        "dependsOn": [
+          {
+            "activity": "Load_Hochschulfinanzen",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Load_Ausgaben",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Load_Einnahmen",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Load_Drittmittel",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Load_Hochschulpersonal",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Load_WissPersonalFach",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Load_Professoren",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Load_StudierendeBund",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Load_Studierende",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Load_StudienanfaengerHochschule",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

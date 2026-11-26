@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "HochschulInsights",
+    "description": ""
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "bce60b5a-0ea6-b80d-4b47-f8d0bf938d6d"
+  }
+}
